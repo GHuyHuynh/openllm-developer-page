@@ -9,6 +9,7 @@ import {
 } from '@/constants/constants';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { ThemeProvider } from '@/components/ui/theme-provider';
 
 export function App() {
   const codeExamples = [
@@ -86,43 +87,45 @@ main();`,
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
-      <div className="container mx-auto px-4 py-8 max-w-5xl">
-        <div className="space-y-8">
-          {/* Back Navigation */}
-          <div className="mb-6">
-            <a href="https://web.cs.dal.ca/~huyh/openllm">
-              <Button
-                variant="ghost"
-                className="gap-2 hover:bg-muted/50 transition-colors"
-              >
-                <ArrowLeft size={16} />
-                Back to Chat
-              </Button>
-            </a>
-          </div>
-
-          {/* Hero Header */}
-          <div className="text-center space-y-6 py-8">
-            <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
-                OpenLLM Developer API
-              </h1>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                OpenAI-compatible RESTful API that works seamlessly with the
-                OpenAI SDK. Start building AI-powered applications with the code
-                examples below.
-              </p>
+    <ThemeProvider>
+      <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
+        <div className="container mx-auto px-4 py-8 max-w-5xl">
+          <div className="space-y-8">
+            {/* Back Navigation */}
+            <div className="mb-6">
+              <a href="https://web.cs.dal.ca/~huyh/openllm">
+                <Button
+                  variant="ghost"
+                  className="gap-2 hover:bg-muted/50 transition-colors"
+                >
+                  <ArrowLeft size={16} />
+                  Back to Chat
+                </Button>
+              </a>
             </div>
-          </div>
 
-          {/* Code Examples Section */}
-          <div className="space-y-6">
-            <CodeBlock examples={codeExamples} title="API Examples" />
+            {/* Hero Header */}
+            <div className="text-center space-y-6 py-8">
+              <div className="space-y-4">
+                <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
+                  OpenLLM Developer API
+                </h1>
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                  OpenAI-compatible RESTful API that works seamlessly with the
+                  OpenAI SDK. Start building AI-powered applications with the code
+                  examples below.
+                </p>
+              </div>
+            </div>
+
+            {/* Code Examples Section */}
+            <div className="space-y-6">
+              <CodeBlock examples={codeExamples} title="API Examples" />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </ThemeProvider>
   );
 }
 
