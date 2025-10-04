@@ -6,10 +6,12 @@ import {
   VLLM_BASE_URL,
   VLLM_API_KEY,
   DEFAULT_VLLM_MODEL,
+  BASE_URL,
 } from '@/constants/constants';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ThemeProvider } from '@/components/ui/theme-provider';
+import { Banner } from '@/components/ui/banner';
 
 export function App() {
   const codeExamples = [
@@ -89,6 +91,14 @@ main();`,
   return (
     <ThemeProvider>
       <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
+        <Banner
+          type="alert"
+          title="Due to high demand, we decided to limit API access and chat access to selected users."
+          description="If you are interested in using the API or chat, please "
+          linkText="contact us"
+          linkUrl={`${BASE_URL}/contact`}
+          defaultVisible={true}
+        />
         <div className="container mx-auto px-4 py-8 max-w-5xl">
           <div className="space-y-8">
             {/* Back Navigation */}
