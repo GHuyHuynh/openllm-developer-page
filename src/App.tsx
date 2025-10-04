@@ -96,7 +96,7 @@ main();`,
           title="Due to high demand, we decided to limit API access and chat access to selected users."
           description="If you are interested in using the API or chat, please "
           linkText="contact us"
-          linkUrl={`${BASE_URL}/contact`}
+          linkUrl={`https://web.cs.dal.ca/~huyh/openllm/`}
           defaultVisible={true}
         />
         <div className="container mx-auto px-4 py-8 max-w-5xl">
