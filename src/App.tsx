@@ -6,7 +6,6 @@ import {
   VLLM_BASE_URL,
   VLLM_API_KEY,
   DEFAULT_VLLM_MODEL,
-  BASE_URL,
 } from '@/constants/constants';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
