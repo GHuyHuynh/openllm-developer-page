@@ -10,7 +10,7 @@ import {
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ThemeProvider } from '@/components/ui/theme-provider';
-import { Banner } from '@/components/ui/banner';
+//import { Banner } from '@/components/ui/banner';
 
 export function App() {
   const codeExamples = [
